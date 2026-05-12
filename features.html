@@ -8,40 +8,135 @@
 </head>
 <body>
 
-    <!-- MENU -->
+    <!-- NAVBAR -->
     <nav>
-        <h1>StudyShare</h1>
+        <h1>Study<span>Share</span></h1>
         <ul>
             <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#apropos">À propos</a></li>
             <li><a href="features.html">Fonctionnalités</a></li>
+            <li><a href="index.html#equipe">Équipe</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- FONCTIONNALITÉS -->
-    <section class="features">
-        <h2>Nos Fonctionnalités</h2>
-
-        <div class="carte">
-            <h3>📚 Partager des cours</h3>
-            <p>Dépose tes cours, résumés et exercices pour aider tes camarades.</p>
-        </div>
-
-        <div class="carte">
-            <h3>🔍 Rechercher des documents</h3>
-            <p>Trouve facilement les cours dont tu as besoin par matière ou par niveau.</p>
-        </div>
-
-        <div class="carte">
-            <h3>💬 Commenter et noter</h3>
-            <p>Donne ton avis sur les documents et aide la communauté à progresser.</p>
-        </div>
-        html<div class="carte">
-    <h3>🎓 Espace par niveau</h3>
-    <p>Accède aux cours organisés par niveau : L1, L2, L3, Master.</p>
-</div>
-
+    <!-- HERO FEATURES -->
+    <section class="hero" style="min-height: 50vh; padding-top: 120px;">
+        <div class="hero-badge">⚡ Nos fonctionnalités</div>
+        <h2>Tout ce dont tu as<br><span>besoin pour réussir</span></h2>
+        <p>Découvre toutes les fonctionnalités qui font de StudyShare la plateforme idéale pour les étudiants.</p>
     </section>
+
+    <!-- FONCTIONNALITÉS PRINCIPALES -->
+    <section class="features">
+        <div class="section-title animate">
+            <h2>Fonctionnalités principales</h2>
+            <p>Des outils pensés pour faciliter ton apprentissage</p>
+            <div class="ligne"></div>
+        </div>
+        <div class="features-grid">
+            <div class="carte animate">
+                <span class="icon">📤</span>
+                <h3>Partager des cours</h3>
+                <p>Dépose tes cours, résumés et exercices en quelques clics pour aider tes camarades à progresser.</p>
+            </div>
+            <div class="carte animate">
+                <span class="icon">🔍</span>
+                <h3>Rechercher des documents</h3>
+                <p>Trouve facilement les cours dont tu as besoin par matière, par niveau ou par mot-clé.</p>
+            </div>
+            <div class="carte animate">
+                <span class="icon">💬</span>
+                <h3>Commenter et noter</h3>
+                <p>Donne ton avis sur les documents et aide la communauté à identifier les meilleurs cours.</p>
+            </div>
+            <div class="carte animate">
+                <span class="icon">🎓</span>
+                <h3>Espace par niveau</h3>
+                <p>Accède aux cours organisés par niveau : L1, L2, L3, Master pour trouver ce qu'il te faut.</p>
+            </div>
+            <div class="carte animate">
+                <span class="icon">📱</span>
+                <h3>Accès mobile</h3>
+                <p>Consulte tes cours depuis ton téléphone, ta tablette ou ton ordinateur à tout moment.</p>
+            </div>
+            <div class="carte animate">
+                <span class="icon">🔔</span>
+                <h3>Notifications</h3>
+                <p>Sois alerté dès qu'un nouveau cours de ta matière favorite est disponible sur la plateforme.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMENT CA MARCHE -->
+    <section class="apropos">
+        <div class="section-title animate">
+            <h2>Comment ça marche ?</h2>
+            <p>Simple, rapide et efficace en 3 étapes</p>
+            <div class="ligne"></div>
+        </div>
+        <div class="features-grid">
+            <div class="carte animate">
+                <span class="icon">1️⃣</span>
+                <h3>Inscris-toi</h3>
+                <p>Crée ton compte gratuitement avec ton email étudiant en moins de 2 minutes.</p>
+            </div>
+            <div class="carte animate">
+                <span class="icon">2️⃣</span>
+                <h3>Explore ou partage</h3>
+                <p>Recherche des cours existants ou partage tes propres documents avec la communauté.</p>
+            </div>
+            <div class="carte animate">
+                <span class="icon">3️⃣</span>
+                <h3>Progresse ensemble</h3>
+                <p>Commente, note et échange avec d'autres étudiants pour apprendre plus efficacement.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>StudyShare</h3>
+                <p>La plateforme de partage de cours entre étudiants de l'ISI.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="features.html">Fonctionnalités</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">studyshare@isi.sn</a></li>
+                    <li><a href="#">Dakar, Sénégal</a></li>
+                    <li><a href="#">+221 77 475 91 50</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 StudyShare — Projet réalisé par des étudiants de l'ISI Informatique</p>
+        </div>
+    </footer>
+
+    <!-- ANIMATIONS -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 
 </body>
 </html>
