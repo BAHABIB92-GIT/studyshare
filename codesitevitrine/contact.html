@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - StudyShare</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <h1>Study<span>Share</span></h1>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#apropos">À propos</a></li>
+            <li><a href="features.html">Fonctionnalités</a></li>
+            <li><a href="index.html#equipe">Équipe</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO CONTACT -->
+    <section class="hero" style="min-height: 50vh; padding-top: 120px;">
+        <div class="hero-badge">📩 Contactez-nous</div>
+        <h2>On est là pour<br><span>vous aider</span></h2>
+        <p>Une question, une suggestion ou un problème ? N'hésitez pas à nous contacter !</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact">
+        <div class="section-title animate">
+            <h2>Envoyez-nous un message</h2>
+            <p>Nous vous répondrons dans les plus brefs délais</p>
+            <div class="ligne"></div>
+        </div>
+        <div class="contact-wrapper">
+
+            <!-- INFOS -->
+            <div class="contact-info animate">
+                <h3>Nos coordonnées</h3>
+                <p>Vous pouvez nous contacter via le formulaire ou directement via nos coordonnées ci-dessous.</p>
+
+                <div class="info-item">
+                    <span class="info-icon">📧</span>
+                    <p>studyshare@isi.sn</p>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">📍</span>
+                    <p>Dakar, Sénégal</p>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">📞</span>
+                    <p>+221 77 475 91 50</p>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">🕐</span>
+                    <p>Lundi - Vendredi : 8h à 18h</p>
+                </div>
+            </div>
+
+            <!-- FORMULAIRE -->
+            <div class="formulaire animate">
+                <input type="text" placeholder="Votre nom complet">
+                <input type="email" placeholder="Votre adresse email">
+                <input type="text" placeholder="Sujet de votre message">
+                <textarea placeholder="Votre message..."></textarea>
+                <button>Envoyer le message 📨</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>StudyShare</h3>
+                <p>La plateforme de partage de cours entre étudiants de l'ISI.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="features.html">Fonctionnalités</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">studyshare@isi.sn</a></li>
+                    <li><a href="#">Dakar, Sénégal</a></li>
+                    <li><a href="#">+221 77 475 91 50</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 StudyShare — Projet réalisé par des étudiants de l'ISI Informatique</p>
+        </div>
+    </footer>
+
+    <!-- ANIMATIONS -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
